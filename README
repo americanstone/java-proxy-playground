@@ -1,0 +1,32 @@
+https://www.youtube.com/watch?v=QdB3enPXSso 
+
+http://www.sven-ruppert.de/
+
+https://github.com/svenruppert
+
+https://www.baeldung.com/cdi-interceptor-vs-spring-aspectj
+
+https://blogs.oracle.com/javamagazine/the-proxy-pattern
+
+
+The dynamic proxy mechanism works nicely for situations where you know the class
+ or classes to be proxied
+
+1. use case 1
+
+ your have model `Account` which from a library you don't have any control
+ in your application you want to provide more functionality more than just 
+ `Account` such as get location info which `Account` does not provide.
+ instead of create your own model to map the all the values from `Account`
+ you can create an interface to extend the `Account` lets say `LocationAwareAccount`  
+ and you can create a dynamicProxy with location data to get location info
+ other methods call delegate to `Account`
+ 
+ use case 2 pass control
+ 
+ lets say you have a service from other library you don't have control.
+ and this service don't have logging implemented.
+ if you real want to log something for debugging you can create a dynamic proxy 
+ to add log for each method calls
+ 
+ 
